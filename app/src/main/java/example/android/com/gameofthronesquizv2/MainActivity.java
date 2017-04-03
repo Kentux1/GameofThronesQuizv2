@@ -1,5 +1,6 @@
 package example.android.com.gameofthronesquizv2;
 
+import android.content.Context;
 import android.graphics.Color;
 import android.provider.MediaStore;
 import android.support.v4.content.ContextCompat;
@@ -7,6 +8,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Html;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.RadioButton;
@@ -112,6 +114,7 @@ public class MainActivity extends AppCompatActivity {
         stannisQ8 = (CheckBox) findViewById(R.id.stannis);
     }
     public void submitAnswers(View view) {
+        resetQuizColors();
         //Adds 1 to the correctAnswers if the right option is clicked
         boolean answerQ1Stark = starkQ1.isChecked();
         boolean answerQ1Umber = umberQ1.isChecked();
@@ -139,6 +142,7 @@ public class MainActivity extends AppCompatActivity {
         else {
             starkWordsQ2.setTextColor(ContextCompat.getColor(this, R.color.wrongAnswer));
         }
+
         boolean answer1Q3 = robertQ3.isChecked();
         boolean answer2Q3 = joffreyQ3.isChecked();
         boolean answer3Q3 = jonSnowQ3.isChecked();

@@ -87,7 +87,8 @@
                         style="@style/editText"
                         android:id="@+id/winteriscoming"
                         android:hint="@string/hint1"
-                        android:maxLines="1"/>
+                        android:maxLines="1"
+                        android:inputType="textCapWords"/>
                 </LinearLayout>
             </android.support.v7.widget.CardView>
             <android.support.v7.widget.CardView
@@ -99,6 +100,43 @@
                     <TextView
                         style="@style/textviewstyle"
                         android:text="@string/question3"/>
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="175dp"
+                        android:src="@drawable/daenerys"
+                        android:scaleType="centerCrop"/>
+                    <EditText
+                        style="@style/editText"
+                        android:id="@+id/daenerys"
+                        android:hint="@string/hint2"
+                        android:inputType="textCapWords"/>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+            <android.support.v7.widget.CardView
+                style="@style/cardview"
+                card_view:cardCornerRadius="10dp"
+                card_view:cardBackgroundColor="#80303030">
+                <LinearLayout
+                    style="@style/linearlayoutstyle">
+                    <TextView
+                        style="@style/textviewstyle"
+                        android:text="@string/question4"/>
+                    <EditText
+                        style="@style/editText"
+                        android:id="@+id/numberofdragons"
+                        android:hint="@string/hint3"
+                        android:inputType="textCapWords"/>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+            <android.support.v7.widget.CardView
+                style="@style/cardview"
+                card_view:cardCornerRadius="10dp"
+                card_view:cardBackgroundColor="#80303030">
+                <LinearLayout
+                    style="@style/linearlayoutstyle">
+                    <TextView
+                        style="@style/textviewstyle"
+                        android:text="@string/question5"/>
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -150,7 +188,7 @@
                     style="@style/linearlayoutstyle">
                     <TextView
                         style="@style/textviewstyle"
-                        android:text="@string/question4"/>
+                        android:text="@string/question6"/>
                     <RadioGroup
                         android:id="@+id/group_q_4"
                         android:layout_width="match_parent"
@@ -176,7 +214,7 @@
                     style="@style/linearlayoutstyle">
                     <TextView
                         style="@style/textviewstyle"
-                        android:text="@string/question5"/>
+                        android:text="@string/question7"/>
                     <RadioGroup
                         android:id="@+id/group_q_5"
                         android:layout_width="match_parent"
@@ -202,7 +240,7 @@
                     style="@style/linearlayoutstyle">
                     <TextView
                         style="@style/textviewstyle"
-                        android:text="@string/question6"/>
+                        android:text="@string/question8"/>
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -254,7 +292,7 @@
                     style="@style/linearlayoutstyle">
                     <TextView
                         style="@style/textviewstyle"
-                        android:text="@string/question7"/>
+                        android:text="@string/question9"/>
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="150dp"
@@ -284,7 +322,7 @@
                     style="@style/linearlayoutstyle">
                     <TextView
                         style="@style/textviewstyle"
-                        android:text="@string/question8"/>
+                        android:text="@string/question10"/>
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -326,41 +364,6 @@
                                 android:text="@string/stannis"/>
                         </LinearLayout>
                     </LinearLayout>
-                </LinearLayout>
-            </android.support.v7.widget.CardView>
-            <android.support.v7.widget.CardView
-                style="@style/cardview"
-                card_view:cardCornerRadius="10dp"
-                card_view:cardBackgroundColor="#80303030">
-                <LinearLayout
-                    style="@style/linearlayoutstyle">
-                    <TextView
-                        style="@style/textviewstyle"
-                        android:text="@string/question9"/>
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="175dp"
-                        android:src="@drawable/daenerys"
-                        android:scaleType="centerCrop"/>
-                    <EditText
-                        style="@style/editText"
-                        android:id="@+id/daenerys"
-                        android:hint="@string/hint2"/>
-                </LinearLayout>
-            </android.support.v7.widget.CardView>
-            <android.support.v7.widget.CardView
-                style="@style/cardview"
-                card_view:cardCornerRadius="10dp"
-                card_view:cardBackgroundColor="#80303030">
-                <LinearLayout
-                    style="@style/linearlayoutstyle">
-                    <TextView
-                        style="@style/textviewstyle"
-                        android:text="@string/question10"/>
-                    <EditText
-                        style="@style/editText"
-                        android:id="@+id/numberofdragons"
-                        android:hint="@string/hint3"/>
                 </LinearLayout>
             </android.support.v7.widget.CardView>
             <Button
