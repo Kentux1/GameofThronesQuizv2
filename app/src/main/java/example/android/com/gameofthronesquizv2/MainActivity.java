@@ -189,8 +189,28 @@ public class MainActivity extends AppCompatActivity {
         boolean answer2Q6 = hodor2Q6.isChecked();
         boolean answer3Q6 = hodor3Q6.isChecked();
         boolean answer4Q6 = hodor4Q6.isChecked();
-        if (answer1Q6 || answer2Q6 || answer3Q6 || answer4Q6) {
+        if (answer1Q6 && answer2Q6 && answer3Q6 && answer4Q6) {
             correctAnswers = correctAnswers + 1;
+            hodor1Q6.setTextColor(ContextCompat.getColor(this, R.color.rightAnswer));
+            hodor2Q6.setTextColor(ContextCompat.getColor(this, R.color.rightAnswer));
+            hodor3Q6.setTextColor(ContextCompat.getColor(this, R.color.rightAnswer));
+            hodor4Q6.setTextColor(ContextCompat.getColor(this, R.color.rightAnswer));
+        }
+        else if (answer1Q6) {
+            correctAnswers = correctAnswers + 1;
+            hodor1Q6.setTextColor(ContextCompat.getColor(this, R.color.rightAnswer));
+        }
+        else if (answer2Q6) {
+            correctAnswers = correctAnswers + 1;
+            hodor2Q6.setTextColor(ContextCompat.getColor(this, R.color.rightAnswer));
+        }
+        else if (answer3Q6) {
+            correctAnswers = correctAnswers + 1;
+            hodor3Q6.setTextColor(ContextCompat.getColor(this, R.color.rightAnswer));
+        }
+        else if (answer4Q6) {
+            correctAnswers = correctAnswers + 1;
+            hodor4Q6.setTextColor(ContextCompat.getColor(this, R.color.rightAnswer));
         }
         boolean answerQ7 = hearMeRoarQ7.isChecked();
         boolean answerQ7Debts = debtsPayedQ7.isChecked();
@@ -204,8 +224,25 @@ public class MainActivity extends AppCompatActivity {
         boolean answer1Q8 = renlyQ8.isChecked();
         boolean answer2Q8 = joffreyQ8.isChecked();
         boolean answer3Q8 = tommenQ8.isChecked();
+        boolean answer4Q8 = stannisQ8.isChecked();
+        if (answer1Q8) {
+            renlyQ8.setTextColor(ContextCompat.getColor(this, R.color.wrongAnswer));
+        }
+        if (answer2Q8) {
+            joffreyQ8.setTextColor(ContextCompat.getColor(this, R.color.wrongAnswer));
+        }
+        if (answer3Q8) {
+            tommenQ8.setTextColor(ContextCompat.getColor(this, R.color.wrongAnswer));
+        }
+        if (answer4Q8) {
+            stannisQ8.setTextColor(ContextCompat.getColor(this, R.color.wrongAnswer));
+        }
         if (answer1Q8 && answer2Q8 && answer3Q8) {
             correctAnswers = correctAnswers + 1;
+            renlyQ8.setTextColor(ContextCompat.getColor(this, R.color.rightAnswer));
+            joffreyQ8.setTextColor(ContextCompat.getColor(this, R.color.rightAnswer));
+            tommenQ8.setTextColor(ContextCompat.getColor(this, R.color.rightAnswer));
+            stannisQ8.setTextColor(ContextCompat.getColor(this, R.color.defaultAnswer));
         }
         String answerQ9 = daenerysQ9.getText().toString().trim();
         String daenerys = getString(R.string.daenerys);
@@ -230,7 +267,7 @@ public class MainActivity extends AppCompatActivity {
             correctAnswersToast = correctAnswers + " answers right??? Go to the wall!!!";
         }
         if (correctAnswers > 0 && correctAnswers < 4) {
-            correctAnswersToast = "You answered " + correctAnswers + " there's no cure for being a cunt.";
+            correctAnswersToast = "You answered " + correctAnswers + " right, there's no cure for being a cunt.";
         }
         if (correctAnswers > 3 && correctAnswers< 7) {
             correctAnswersToast = "You answered " + correctAnswers + " right, you might survive in Westeros...";
