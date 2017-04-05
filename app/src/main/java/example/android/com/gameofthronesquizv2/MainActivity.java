@@ -189,27 +189,19 @@ public class MainActivity extends AppCompatActivity {
         boolean answer2Q6 = hodor2Q6.isChecked();
         boolean answer3Q6 = hodor3Q6.isChecked();
         boolean answer4Q6 = hodor4Q6.isChecked();
-        if (answer1Q6 && answer2Q6 && answer3Q6 && answer4Q6) {
+        if (answer1Q6 || answer2Q6 || answer3Q6 || answer4Q6) {
             correctAnswers = correctAnswers + 1;
-            hodor1Q6.setTextColor(ContextCompat.getColor(this, R.color.rightAnswer));
-            hodor2Q6.setTextColor(ContextCompat.getColor(this, R.color.rightAnswer));
-            hodor3Q6.setTextColor(ContextCompat.getColor(this, R.color.rightAnswer));
-            hodor4Q6.setTextColor(ContextCompat.getColor(this, R.color.rightAnswer));
         }
-        else if (answer1Q6) {
-            correctAnswers = correctAnswers + 1;
+        if (answer1Q6) {
             hodor1Q6.setTextColor(ContextCompat.getColor(this, R.color.rightAnswer));
         }
-        else if (answer2Q6) {
-            correctAnswers = correctAnswers + 1;
+        if (answer2Q6) {
             hodor2Q6.setTextColor(ContextCompat.getColor(this, R.color.rightAnswer));
         }
-        else if (answer3Q6) {
-            correctAnswers = correctAnswers + 1;
+        if (answer3Q6) {
             hodor3Q6.setTextColor(ContextCompat.getColor(this, R.color.rightAnswer));
         }
-        else if (answer4Q6) {
-            correctAnswers = correctAnswers + 1;
+        if (answer4Q6) {
             hodor4Q6.setTextColor(ContextCompat.getColor(this, R.color.rightAnswer));
         }
         boolean answerQ7 = hearMeRoarQ7.isChecked();
