@@ -113,8 +113,11 @@ public class MainActivity extends AppCompatActivity {
         debtsPayedQ7 = (RadioButton) findViewById(R.id.debtspayed);
         stannisQ8 = (CheckBox) findViewById(R.id.stannis);
     }
+    //This method is called when the Submit Answers button is pressed.
     public void submitAnswers(View view) {
+        //First resets the quiz colors to it's default.
         resetQuizColors();
+        //Then checks every answer and and shows if the answer is right or wrong by changing the color of the answer.
         //Adds 1 to the correctAnswers if the right option is clicked
         boolean answerQ1Stark = starkQ1.isChecked();
         boolean answerQ1Umber = umberQ1.isChecked();
@@ -254,6 +257,7 @@ public class MainActivity extends AppCompatActivity {
         else {
             numberOfDragonsQ10.setTextColor(ContextCompat.getColor(this, R.color.wrongAnswer));
         }
+        //This block of code show a toast message with the correct answers followed by a message accordingly to the number of correct answers.
         String correctAnswersToast = null;
         if (correctAnswers == 0) {
             correctAnswersToast = correctAnswers + " answers right??? Go to the wall!!!";
@@ -273,6 +277,7 @@ public class MainActivity extends AppCompatActivity {
         Toast.makeText(this, correctAnswersToast, Toast.LENGTH_LONG).show();
         correctAnswers = 0;
     }
+    //This method is called when the Reset Quiz button is pressed and resets all the answers and colors
     public void resetQuiz(View view) {
         resetQuizColors();
         groupQ1.clearCheck();
@@ -303,6 +308,7 @@ public class MainActivity extends AppCompatActivity {
         daenerysQ9.clearFocus();
         numberOfDragonsQ10.clearFocus();
     }
+    //This method resets the answers colors to their default(White)
     public void resetQuizColors (){
         starkQ1.setTextColor(ContextCompat.getColor(this, R.color.defaultAnswer));
         umberQ1.setTextColor(ContextCompat.getColor(this, R.color.defaultAnswer));
