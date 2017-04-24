@@ -26,7 +26,7 @@ import static android.R.id.edit;
 import static android.R.interpolator.linear;
 
 public class MainActivity extends AppCompatActivity {
-    int correctAnswers = 0;
+    int correctAnswers;
     //Answers variable declaration
     //Q1
     RadioGroup groupQ1;
@@ -227,7 +227,7 @@ public class MainActivity extends AppCompatActivity {
         if (answer4Q8) {
             stannisQ8.setTextColor(ContextCompat.getColor(this, R.color.wrongAnswer));
         }
-        if (answer1Q8 && answer2Q8 && answer3Q8) {
+        if (answer1Q8 && answer2Q8 && answer3Q8 && !answer4Q8) {
             correctAnswers = correctAnswers + 1;
             renlyQ8.setTextColor(ContextCompat.getColor(this, R.color.rightAnswer));
             joffreyQ8.setTextColor(ContextCompat.getColor(this, R.color.rightAnswer));
