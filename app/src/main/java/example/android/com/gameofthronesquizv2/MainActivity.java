@@ -68,6 +68,7 @@ public class MainActivity extends AppCompatActivity {
     //Q10
     EditText numberOfDragonsQ10;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -113,6 +114,7 @@ public class MainActivity extends AppCompatActivity {
         debtsPayedQ7 = (RadioButton) findViewById(R.id.debtspayed);
         stannisQ8 = (CheckBox) findViewById(R.id.stannis);
     }
+
     //This method is called when the Submit Answers button is pressed.
     public void submitAnswers(View view) {
         //First resets the quiz colors to it's default.
@@ -124,25 +126,21 @@ public class MainActivity extends AppCompatActivity {
         boolean answerQ1Bolton = boltonQ1.isChecked();
         boolean answerQ1Tully = tullyQ1.isChecked();
         if (answerQ1Stark) {
-            correctAnswers = correctAnswers +1;
+            correctAnswers = correctAnswers + 1;
             starkQ1.setTextColor(ContextCompat.getColor(this, R.color.rightAnswer));
-        }
-        else if (answerQ1Umber){
+        } else if (answerQ1Umber) {
             umberQ1.setTextColor(ContextCompat.getColor(this, R.color.wrongAnswer));
-        }
-        else if (answerQ1Bolton){
+        } else if (answerQ1Bolton) {
             boltonQ1.setTextColor(ContextCompat.getColor(this, R.color.wrongAnswer));
-        }
-        else if (answerQ1Tully){
+        } else if (answerQ1Tully) {
             tullyQ1.setTextColor(ContextCompat.getColor(this, R.color.wrongAnswer));
         }
         String answerQ2 = starkWordsQ2.getText().toString().trim();
         String starkWords = getString(R.string.winteriscoming);
-        if (answerQ2.equalsIgnoreCase(starkWords)){
+        if (answerQ2.equalsIgnoreCase(starkWords)) {
             correctAnswers = correctAnswers + 1;
             starkWordsQ2.setTextColor(ContextCompat.getColor(this, R.color.rightAnswer));
-        }
-        else {
+        } else {
             starkWordsQ2.setTextColor(ContextCompat.getColor(this, R.color.wrongAnswer));
         }
 
@@ -175,8 +173,7 @@ public class MainActivity extends AppCompatActivity {
         if (answerQ4Robert) {
             correctAnswers = correctAnswers + 1;
             robertQ4.setTextColor(ContextCompat.getColor(this, R.color.rightAnswer));
-        }
-        else if (answerQ4Aerys) {
+        } else if (answerQ4Aerys) {
             aerysQ4.setTextColor(ContextCompat.getColor(this, R.color.wrongAnswer));
         }
         boolean answerQ5 = targaryenQ5.isChecked();
@@ -184,8 +181,7 @@ public class MainActivity extends AppCompatActivity {
         if (answerQ5) {
             correctAnswers = correctAnswers + 1;
             targaryenQ5.setTextColor(ContextCompat.getColor(this, R.color.rightAnswer));
-        }
-        else if (answerQ5lannister) {
+        } else if (answerQ5lannister) {
             lannisterQ5.setTextColor(ContextCompat.getColor(this, R.color.wrongAnswer));
         }
         boolean answer1Q6 = hodor1Q6.isChecked();
@@ -210,10 +206,9 @@ public class MainActivity extends AppCompatActivity {
         boolean answerQ7 = hearMeRoarQ7.isChecked();
         boolean answerQ7Debts = debtsPayedQ7.isChecked();
         if (answerQ7) {
-            correctAnswers = correctAnswers +1;
+            correctAnswers = correctAnswers + 1;
             hearMeRoarQ7.setTextColor(ContextCompat.getColor(this, R.color.rightAnswer));
-        }
-        else if (answerQ7Debts) {
+        } else if (answerQ7Debts) {
             debtsPayedQ7.setTextColor(ContextCompat.getColor(this, R.color.wrongAnswer));
         }
         boolean answer1Q8 = renlyQ8.isChecked();
@@ -241,20 +236,18 @@ public class MainActivity extends AppCompatActivity {
         }
         String answerQ9 = daenerysQ9.getText().toString().trim();
         String daenerys = getString(R.string.daenerys);
-        if (answerQ9.equalsIgnoreCase(daenerys)){
+        if (answerQ9.equalsIgnoreCase(daenerys)) {
             correctAnswers = correctAnswers + 1;
             daenerysQ9.setTextColor(ContextCompat.getColor(this, R.color.rightAnswer));
-        }
-        else {
+        } else {
             daenerysQ9.setTextColor(ContextCompat.getColor(this, R.color.wrongAnswer));
         }
         String answerQ10 = numberOfDragonsQ10.getText().toString().trim();
         String numberOfDragons = getString(R.string.number_of_dragons);
-        if (answerQ10.equalsIgnoreCase(numberOfDragons)){
+        if (answerQ10.equalsIgnoreCase(numberOfDragons)) {
             correctAnswers = correctAnswers + 1;
             numberOfDragonsQ10.setTextColor(ContextCompat.getColor(this, R.color.rightAnswer));
-        }
-        else {
+        } else {
             numberOfDragonsQ10.setTextColor(ContextCompat.getColor(this, R.color.wrongAnswer));
         }
         //This block of code show a toast message with the correct answers followed by a message accordingly to the number of correct answers.
@@ -265,7 +258,7 @@ public class MainActivity extends AppCompatActivity {
         if (correctAnswers > 0 && correctAnswers < 4) {
             correctAnswersToast = "You answered " + correctAnswers + " right, there's no cure for being a cunt.";
         }
-        if (correctAnswers > 3 && correctAnswers< 7) {
+        if (correctAnswers > 3 && correctAnswers < 7) {
             correctAnswersToast = "You answered " + correctAnswers + " right, you might survive in Westeros...";
         }
         if (correctAnswers > 6 && correctAnswers < 10) {
@@ -277,6 +270,7 @@ public class MainActivity extends AppCompatActivity {
         Toast.makeText(this, correctAnswersToast, Toast.LENGTH_LONG).show();
         correctAnswers = 0;
     }
+
     //This method is called when the Reset Quiz button is pressed and resets all the answers and colors
     public void resetQuiz(View view) {
         resetQuizColors();
@@ -308,8 +302,9 @@ public class MainActivity extends AppCompatActivity {
         daenerysQ9.clearFocus();
         numberOfDragonsQ10.clearFocus();
     }
+
     //This method resets the answers colors to their default(White)
-    public void resetQuizColors (){
+    public void resetQuizColors() {
         starkQ1.setTextColor(ContextCompat.getColor(this, R.color.defaultAnswer));
         umberQ1.setTextColor(ContextCompat.getColor(this, R.color.defaultAnswer));
         boltonQ1.setTextColor(ContextCompat.getColor(this, R.color.defaultAnswer));

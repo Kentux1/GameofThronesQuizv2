@@ -8,6 +8,7 @@
         <item name="colorAccent">@android:color/black</item>
         <item name="android:textColor">#373D3F</item>
     </style>
+
     <style name="header">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
@@ -17,6 +18,7 @@
         <item name="android:gravity">center</item>
         <item name="android:layout_margin">8dp</item>
     </style>
+
     <style name="textviewstyle">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
@@ -25,6 +27,7 @@
         <item name="android:gravity">center</item>
         <item name="android:layout_margin">8dp</item>
     </style>
+
     <style name="radiobutton">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
@@ -33,11 +36,13 @@
         <item name="android:layout_marginBottom">6dp</item>
         <item name="android:buttonTint" tools:targetApi="lollipop">#FFFFFF</item>
     </style>
+
     <style name="linearlayoutstyle">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:orientation">vertical</item>
     </style>
+
     <style name="cardview">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
@@ -46,6 +51,7 @@
         <item name="android:layout_marginTop">8dp</item>
         <item name="android:layout_marginBottom">8dp</item>
     </style>
+
     <style name="editText">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
