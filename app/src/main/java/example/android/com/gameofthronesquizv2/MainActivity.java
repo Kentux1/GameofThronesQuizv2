@@ -250,7 +250,7 @@ public class MainActivity extends AppCompatActivity {
         } else {
             numberOfDragonsQ10.setTextColor(ContextCompat.getColor(this, R.color.wrongAnswer));
         }
-        //This block of code show a toast message with the correct answers followed by a message accordingly to the number of correct answers.
+        //This block of code shows a toast with the number of correct answers and a message according to the score
         String correctAnswersToast = null;
         if (correctAnswers == 0) {
             correctAnswersToast = correctAnswers + " answers right??? Go to the wall!!!";
