@@ -1,29 +1,16 @@
 package example.android.com.gameofthronesquizv2;
 
-import android.content.Context;
-import android.graphics.Color;
-import android.provider.MediaStore;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.text.Html;
 import android.view.View;
-import android.view.inputmethod.InputMethodManager;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.ScrollView;
-import android.widget.TextView;
 import android.widget.Toast;
 
-import example.android.com.gameofthronesquizv2.R;
-
-import static android.R.attr.button;
-import static android.R.attr.duration;
-import static android.R.attr.right;
-import static android.R.id.edit;
-import static android.R.interpolator.linear;
 
 public class MainActivity extends AppCompatActivity {
     int correctAnswers;
